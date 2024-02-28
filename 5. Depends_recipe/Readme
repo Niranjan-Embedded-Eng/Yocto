@@ -1,0 +1,40 @@
+# Yocto Recipe: depends-build-time
+
+## Description
+The "depends-build-time" recipe demonstrates how to specify build-time dependencies for a Yocto recipe. Build-time dependencies are required during the build process of the recipe but are not necessarily needed at runtime. This README provides instructions on how to integrate the "depends-build-time" recipe into a Yocto-based system.
+
+## Prerequisites
+- Yocto Project environment set up and initialized
+- Access to the Yocto project source files
+- Familiarity with Yocto build system concepts
+- Knowledge of build-time dependencies required by the "depends-build-time" recipe
+
+## Usage
+To include the "depends-build-time" recipe in your Yocto image, follow these steps:
+
+### 1. Navigate to Yocto Source Directory
+Navigate to the directory containing your Yocto project source files.
+
+### 2. Add Recipe
+Add the "depends-build-time" recipe to your Yocto project's layer. You can create a new recipe file or add it to an existing one.
+
+### 3. Specify Build-time Dependencies
+In the "depends-build-time" recipe file, specify the build-time dependencies using the appropriate Yocto metadata syntax. For example:
+DEPENDS = "dependency1 dependency2"
+
+
+Replace `dependency1` and `dependency2` with the names of the required build-time dependencies.
+
+### 4. Build Recipe
+Build your Yocto image as usual using the `bitbake` command. For example:
+bitbake <image-name>
+
+
+Replace `<image-name>` with the name of your desired Yocto image.
+
+### 5. Run Program (if applicable)
+If the "depends-build-time" recipe generates any executables or artifacts that need to be executed or used during the build process, ensure they are properly integrated into the build system. If not, skip this step.
+
+## Notes
+- Ensure that all specified build-time dependencies are available in the Yocto build environment during the build process.
+- Additional customization options for specifying build-time dependencies and integrating them into the Yocto build system can be explored in the Yocto Project documentation.
