@@ -1,0 +1,28 @@
+# Yocto Recipe: libcalculator
+
+## Description
+The "libcalculator" recipe provides a dynamic library containing arithmetic functions (addition, subtraction, multiplication, and division) implemented in `add.c`, `sub.c`, `mul.c`, and `div.c` respectively. Additionally, the library includes a header file `lib_cal.h` defining function prototypes, and a source file `print.c` for printing library information.
+
+The "cal" program (`cal.c`) is a user program that demonstrates the usage of the "libcalculator" library to perform arithmetic operations.
+
+This README provides instructions on how to integrate the "libcalculator" library into a Yocto-based system.
+
+## Prerequisites
+- Yocto Project environment set up and initialized
+- Access to the Yocto project source files
+- Familiarity with Yocto build system concepts
+
+## Usage
+To include the "libcalculator" library in your Yocto image, follow these steps:
+
+### 1. Navigate to Yocto Source Directory
+Navigate to the directory containing your Yocto project source files.
+
+### 2. Add Recipe
+Add the "libcalculator" recipe to your Yocto project's layer. You can create a new recipe file or add it to an existing one.
+
+### 3. Provide Source Files
+Ensure that the source files required to build the "libcalculator" library (`add.c`, `sub.c`, `mul.c`, `div.c`, `lib_cal.h`, `print.c`) are available in the recipe directory or are fetched from a remote source during the recipe's do_fetch task.
+
+### 4. Build Recipe
+Build your Yocto image as usual using the `bitbake` command. For example: bitbake <recipe-name>
