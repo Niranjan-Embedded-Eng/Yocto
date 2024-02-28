@@ -1,0 +1,5 @@
+subtract.o: subtract.c /usr/include/stdc-predef.h header.h
+
+/usr/include/stdc-predef.h:
+
+header.h:

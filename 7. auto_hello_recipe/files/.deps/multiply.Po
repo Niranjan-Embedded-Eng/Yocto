@@ -1,0 +1,5 @@
+multiply.o: multiply.c /usr/include/stdc-predef.h header.h
+
+/usr/include/stdc-predef.h:
+
+header.h:
