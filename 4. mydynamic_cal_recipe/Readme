@@ -26,3 +26,4 @@ Ensure that the source files required to build the "libcalculator" library (`add
 
 ### 4. Build Recipe
 Build your Yocto image as usual using the `bitbake` command. For example: bitbake <recipe-name>
+
