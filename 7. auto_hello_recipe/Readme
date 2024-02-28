@@ -1,0 +1,47 @@
+# Yocto Recipe: autotools-example
+
+## Description
+The "autotools-example" recipe demonstrates how to create a recipe for a software project that utilizes the Autotools build system. This README provides instructions on how to integrate the "autotools-example" recipe into a Yocto-based system.
+
+## Prerequisites
+- Yocto Project environment set up and initialized
+- Access to the Yocto project source files
+- Familiarity with Yocto build system concepts
+- Understanding of the Autotools build system used by the software project
+
+## Usage
+To include the "autotools-example" recipe in your Yocto image, follow these steps:
+
+### 1. Navigate to Yocto Source Directory
+Navigate to the directory containing your Yocto project source files.
+
+### 2. Add Recipe
+Add the "autotools-example" recipe to your Yocto project's layer. You can create a new recipe file or add it to an existing one.
+
+### 3. Specify SRC_URI
+In the "autotools-example" recipe file, specify the source URI (SRC_URI) for fetching the software project's source code. For example:
+SRC_URI = "file://<source-file>"
+
+
+Replace `<source-file>` with the name of the source file or archive containing the software project's source code.
+
+### 4. Build Recipe
+Build your Yocto image as usual using the `bitbake` command. For example:
+
+
+Replace `<source-file>` with the name of the source file or archive containing the software project's source code.
+
+### 4. Build Recipe
+Build your Yocto image as usual using the `bitbake` command. For example:
+
+bitbake <image-name>
+
+
+Replace `<image-name>` with the name of your desired Yocto image.
+
+### 5. Verify Build
+After building the Yocto image successfully, verify that the "autotools-example" recipe is built and included in the image.
+
+## Notes
+- Ensure that the software project's build system is properly configured to use Autotools.
+- Additional customization options for integrating Autotools-based recipes into the Yocto build system can be explored in the Yocto Project documentation.
