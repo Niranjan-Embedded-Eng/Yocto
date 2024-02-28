@@ -1,0 +1,34 @@
+# Yocto Recipe: static-library
+
+## Description
+The "static-library" recipe provides a static library containing arithmetic functions (addition, subtraction, multiplication, division) implemented in C, along with header files for library interface. Additionally, a user program `cal.c` is provided as an example to demonstrate the usage of this static library.
+
+## Files
+- `add.c`: Source file containing the implementation of the addition function.
+- `sub.c`: Source file containing the implementation of the subtraction function.
+- `mul.c`: Source file containing the implementation of the multiplication function.
+- `div.c`: Source file containing the implementation of the division function.
+- `lib_cal.h`: Header file defining the interface for the static library.
+- `print.c`: Source file containing helper functions for printing.
+- `cal.c`: User program demonstrating the usage of the static library.
+
+## Usage
+To include the static library in your Yocto image and use it in a user program, follow these steps:
+
+### 1. Add Recipe
+Add the "static-library" recipe to your Yocto project's layer. You can create a new recipe file or add it to an existing one.
+
+### 2. Configure Library
+Ensure that the static library is properly configured and built by including all required source files (`add.c`, `sub.c`, `mul.c`, `div.c`, `lib_cal.h`, `print.c`) in the recipe's `SRC_URI` and defining appropriate build rules.
+
+### 3. Build Library
+Build your Yocto image as usual using the `bitbake` command. For example:
+
+
+Replace `<image-name>` with the name of your desired Yocto image.
+
+### 4. Use Library in User Program
+In your user program `cal.c`, include the `lib_cal.h` header file and link against the static library during compilation. Implement the required functionality using the functions provided by the static library.
+
+### 5. Build User Program
+Compile the user program `cal.c` using appropriate flags to link against the static library. For example:
