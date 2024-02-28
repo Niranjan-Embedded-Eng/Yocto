@@ -1,0 +1,16 @@
+# Yocto Recipe: hello
+
+## Description
+The "hello" recipe provides a simple "Hello, World!" program that can be built and run on a Yocto-based system. It serves as a basic example of how to create and integrate a custom recipe into a Yocto project.
+
+## Usage
+To include the "hello" program in your Yocto image, simply add the recipe to your Yocto project's layer and include it in your image recipe or configuration.
+
+## Building
+To build the "hello" program using Yocto, follow these steps:
+
+1. Ensure that the Yocto build environment is set up and initialized.
+
+2. Add the "hello" recipe to your Yocto project's layer. You can either create a new recipe file or add it to an existing one.
+
+3. Build your Yocto image as usual using the `bitbake` command. For example:
